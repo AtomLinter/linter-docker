@@ -1,0 +1,25 @@
+{
+  "name": "linter-docker",
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "main": "./lib/init",
+  "version": "0.1.0",
+  "description": "Linter plugin for Dockerfile's, using dockerlint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnwebbcole/linter-docker.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "atom-linter": "~3.3.5",
+    "dockerlint": "~0.1.3"
+  }
+}
