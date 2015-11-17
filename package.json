@@ -12,7 +12,7 @@
   "description": "Linter plugin for Dockerfile's, using dockerlint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnwebbcole/linter-docker.git"
+    "url": "https://github.com/AtomLinter/linter-docker.git"
   },
   "license": "MIT",
   "engines": {
