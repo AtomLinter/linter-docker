@@ -19,7 +19,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "atom-linter": "~4.4.0",
+    "atom-linter": "~4.5.0",
     "dockerlint": "~0.1.4"
   }
 }
