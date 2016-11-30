@@ -27,7 +27,7 @@ module.exports =
       lintOnFly: true # must be false for scope: 'project'
       lint: (textEditor) =>
         filePath = textEditor.getPath()
-        return helpers.execNode(@executablePath, [filePath], {stream: 'stderr', throwOnStdErr:false})
+        return helpers.execNode(@executablePath, [filePath], {stream: 'stderr', throwOnStdErr:false, allowEmptyStderr: true})
           .then (output) ->
             results = helpers.parse(output, '(?<type>WARN|ERROR):(?<message>.*) on line (?<line>\\d+)')
             return results.map (r) ->
