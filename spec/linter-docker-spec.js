@@ -15,14 +15,7 @@ describe('The docker provider for Linter', () => {
   const lint = require('../lib/init').provideLinter().lint;
 
   beforeEach(async () => {
-    // Info about this beforeEach() implementation:
-    // https://github.com/AtomLinter/Meta/issues/15
-    const activationPromise = atom.packages.activatePackage('linter-docker');
-
-    // await atom.packages.activatePackage('language-python');
-
-    atom.packages.triggerDeferredActivationHooks();
-    await activationPromise;
+    await atom.packages.activatePackage('linter-docker');
   });
 
   it('should be in the packages list', () =>
@@ -44,10 +37,10 @@ describe('The docker provider for Linter', () => {
     const expected = 'ENV invalid format ENV_VARIABLE';
     const messages = await lint(editor);
 
-    expect(messages[0].type).toBe('Error');
-    expect(messages[0].text).toBe(expected);
-    expect(messages[0].filePath).toBe(badPath);
-    expect(messages[0].range).toEqual([[1, 0], [1, 16]]);
+    expect(messages[0].severity).toBe('error');
+    expect(messages[0].excerpt).toBe(expected);
+    expect(messages[0].location.file).toBe(badPath);
+    expect(messages[0].location.position).toEqual([[1, 0], [1, 16]]);
     expect(messages.length).toBe(1);
   });
 
@@ -56,10 +49,10 @@ describe('The docker provider for Linter', () => {
     const expected = "First instruction must be 'FROM', is: RUN";
     const messages = await lint(editor);
 
-    expect(messages[0].type).toBe('Error');
-    expect(messages[0].text).toBe(expected);
-    expect(messages[0].filePath).toBe(badNoFromPath);
-    expect(messages[0].range).toEqual([[0, 0], [0, 18]]);
+    expect(messages[0].severity).toBe('error');
+    expect(messages[0].excerpt).toBe(expected);
+    expect(messages[0].location.file).toBe(badNoFromPath);
+    expect(messages[0].location.position).toEqual([[0, 0], [0, 18]]);
     expect(messages.length).toBe(1);
   });
 
@@ -68,10 +61,10 @@ describe('The docker provider for Linter', () => {
     const expected = 'Multiple CMD instructions found';
     const messages = await lint(editor);
 
-    expect(messages[0].type).toBe('Error');
-    expect(messages[0].text).toBe(expected);
-    expect(messages[0].filePath).toBe(badRepeatedCMDPath);
-    expect(messages[0].range).toEqual([[2, 0], [2, 10]]);
+    expect(messages[0].severity).toBe('error');
+    expect(messages[0].excerpt).toBe(expected);
+    expect(messages[0].location.file).toBe(badRepeatedCMDPath);
+    expect(messages[0].location.position).toEqual([[2, 0], [2, 10]]);
     expect(messages.length).toBe(1);
   });
 
@@ -80,10 +73,10 @@ describe('The docker provider for Linter', () => {
     const expected = `${emptyPath} does not contain any instructions`;
     const messages = await lint(editor);
 
-    expect(messages[0].type).toBe('Error');
-    expect(messages[0].text).toBe(expected);
-    expect(messages[0].filePath).toBe(emptyPath);
-    expect(messages[0].range).toEqual([[0, 0], [0, 0]]);
+    expect(messages[0].severity).toBe('error');
+    expect(messages[0].excerpt).toBe(expected);
+    expect(messages[0].location.file).toBe(emptyPath);
+    expect(messages[0].location.position).toEqual([[0, 0], [0, 0]]);
     expect(messages.length).toBe(1);
   });
 });
