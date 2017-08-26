@@ -1,26 +1,17 @@
 {
   "name": "linter-docker",
-  "providedServices": {
-    "linter": {
-      "versions": {
-        "1.0.0": "provideLinter"
-      }
-    }
+  "main": "./lib/init",
+  "version": "0.2.0",
+  "description": "Linter plugin for Dockerfile's, using dockerlint",
+  "repository": "https://github.com/AtomLinter/linter-docker.git",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.4.0 <2.0.0"
   },
   "scripts": {
     "test": "apm test",
     "lint": "eslint ."
-  },
-  "main": "./lib/init",
-  "version": "0.2.0",
-  "description": "Linter plugin for Dockerfile's, using dockerlint",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AtomLinter/linter-docker.git"
-  },
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.4.0 <2.0.0"
   },
   "dependencies": {
     "atom-linter": "^10.0.0",
@@ -31,6 +22,13 @@
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "jasmine-fix": "^1.3.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
   },
   "eslintConfig": {
     "extends": "airbnb-base",
