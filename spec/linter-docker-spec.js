@@ -63,7 +63,7 @@ describe('The docker provider for Linter', () => {
 
   it("shows errors in an a file with repeated instruction 'CMD'", async () => {
     const editor = await atom.workspace.open(badRepeatedCMDPath);
-    const expected = "Multiple CMD instructions found, only line 3 will take effect";
+    const expected = 'Multiple CMD instructions found, only line 3 will take effect';
     const messages = await lint(editor);
 
     expect(messages[0].type).toBe('Error');
