@@ -1,0 +1,2 @@
+FROM someimage
+ENV	ENV_VARIABLE

@@ -7,6 +7,9 @@
       }
     }
   },
+  "scripts": {
+    "test": "apm test"
+  },
   "main": "./lib/init",
   "version": "0.2.0",
   "description": "Linter plugin for Dockerfile's, using dockerlint",
@@ -21,5 +24,8 @@
   "dependencies": {
     "atom-linter": "^10.0.0",
     "dockerlint": "~0.3.1"
+  },
+  "devDependencies": {
+    "jasmine-fix": "^1.3.0"
   }
 }
