@@ -47,7 +47,8 @@ describe('The docker provider for Linter', () => {
     expect(messages[0].type).toBe('Error');
     expect(messages[0].text).toBe(expected);
     expect(messages[0].filePath).toBe(badPath);
-    expect(messages[0].range).toEqual([[1, 0], [1, 0]]);
+    expect(messages[0].range).toEqual([[1, 0], [1, 16]]);
+    expect(messages.length).toBe(1);
   });
 
   it("shows errors in an a file without instruction 'FROM'", async () => {
@@ -57,29 +58,32 @@ describe('The docker provider for Linter', () => {
 
     expect(messages[0].type).toBe('Error');
     expect(messages[0].text).toBe(expected);
-    expect(messages[0].filePath).toBe(badPath);
-    expect(messages[0].range).toEqual([[1, 0], [1, 0]]);
+    expect(messages[0].filePath).toBe(badNoFromPath);
+    expect(messages[0].range).toEqual([[0, 0], [0, 18]]);
+    expect(messages.length).toBe(1);
   });
 
   it("shows errors in an a file with repeated instruction 'CMD'", async () => {
     const editor = await atom.workspace.open(badRepeatedCMDPath);
-    const expected = 'Multiple CMD instructions found, only line 3 will take effect';
+    const expected = 'Multiple CMD instructions found';
     const messages = await lint(editor);
 
     expect(messages[0].type).toBe('Error');
     expect(messages[0].text).toBe(expected);
-    expect(messages[0].filePath).toBe(badPath);
-    expect(messages[0].range).toEqual([[1, 0], [1, 0]]);
+    expect(messages[0].filePath).toBe(badRepeatedCMDPath);
+    expect(messages[0].range).toEqual([[2, 0], [2, 10]]);
+    expect(messages.length).toBe(1);
   });
 
   it('shows errors in an empty file', async () => {
     const editor = await atom.workspace.open(emptyPath);
-    const expected = `ERROR: ${emptyPath} does not contain any instructions`;
+    const expected = `${emptyPath} does not contain any instructions`;
     const messages = await lint(editor);
 
     expect(messages[0].type).toBe('Error');
     expect(messages[0].text).toBe(expected);
     expect(messages[0].filePath).toBe(emptyPath);
     expect(messages[0].range).toEqual([[0, 0], [0, 0]]);
+    expect(messages.length).toBe(1);
   });
 });
