@@ -11,8 +11,8 @@ Linter package must be installed in order to use this plugin. If Linter is not i
 $ apm install linter-docker
 ```
 
-### Development and Testing
-If you are developing or testing this plugin, it's easy to load using `apm link`
+### Development
+If you are developing this plugin, it's easy to load using `apm link`
 
 First make sure you don't have linter-docker installed.
 ```bash
@@ -33,6 +33,11 @@ apm unlink
 apm install linter-docker
 ```
 
+### Testing and Linting
+Use `npm run test` to execute the tests.
+
+Use `npm run lint` to lint the project.
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
@@ -40,12 +45,12 @@ If you would like to contribute enhancements or fixes, please do the following:
 1. Hack on a separate topic branch created from the latest `master`.
 1. Commit and push the topic branch.
 1. Make a pull request.
-1. welcome to the club
+1. Welcome to the club
 
 Please note that modifications should follow these coding guidelines:
 
 - Indent is 2 spaces.
-- Code should pass coffeelint linter.
+- Code should pass ESLint linter.
 - Vertical whitespace helps readability, don’t be afraid to use it.
 
 Thank you for helping out!
