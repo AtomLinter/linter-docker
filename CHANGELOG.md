@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.2.1](https://github.com/AtomLinter/linter-docker/tree/v0.2.1) (2017-08-27)
+[Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.2.0...v0.2.1)
+
+**Implemented enhancements:**
+
+- Implement specs [\#10](https://github.com/AtomLinter/linter-docker/issues/10)
+- Major cleanup [\#38](https://github.com/AtomLinter/linter-docker/pull/38) ([lucasdf](https://github.com/lucasdf))
+- Update atom-linter to version 10.0.0 🚀 [\#36](https://github.com/AtomLinter/linter-docker/pull/36) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+**Fixed bugs:**
+
+- Some messages are not displayed [\#37](https://github.com/AtomLinter/linter-docker/issues/37)
+- Major cleanup [\#38](https://github.com/AtomLinter/linter-docker/pull/38) ([lucasdf](https://github.com/lucasdf))
+
 ## [v0.2.0](https://github.com/AtomLinter/linter-docker/tree/v0.2.0) (2017-04-04)
 [Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.1.5...v0.2.0)
 
