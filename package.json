@@ -1,25 +1,58 @@
 {
   "name": "linter-docker",
-  "providedServices": {
-    "linter": {
-      "versions": {
-        "1.0.0": "provideLinter"
-      }
-    }
-  },
   "main": "./lib/init",
   "version": "0.2.0",
   "description": "Linter plugin for Dockerfile's, using dockerlint",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AtomLinter/linter-docker.git"
-  },
+  "repository": "https://github.com/AtomLinter/linter-docker.git",
+  "private": true,
   "license": "MIT",
   "engines": {
     "atom": ">=1.4.0 <2.0.0"
   },
+  "scripts": {
+    "test": "apm test",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "atom-linter": "^10.0.0",
+    "atom-package-deps": "^4.6.0",
     "dockerlint": "~0.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "jasmine-fix": "^1.3.0"
+  },
+  "package-deps": [
+    "linter:2.0.0"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
+    "globals": {
+      "atom": true
+    },
+    "env": {
+      "node": true,
+      "browser": true
+    }
   }
 }
