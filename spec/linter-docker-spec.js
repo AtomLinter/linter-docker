@@ -12,19 +12,17 @@ const badRepeatedCMDPath = join(fixturePath, 'bad-repeated-cmd', 'Dockerfile');
 const emptyPath = join(fixturePath, 'empty', 'Dockerfile');
 
 describe('The docker provider for Linter', () => {
-  const lint = require('../lib/init').provideLinter().lint;
+  const { lint } = require('../lib/init').provideLinter();
 
   beforeEach(async () => {
     await atom.packages.activatePackage('linter-docker');
   });
 
   it('should be in the packages list', () =>
-    expect(atom.packages.isPackageLoaded('linter-docker')).toBe(true),
-  );
+    expect(atom.packages.isPackageLoaded('linter-docker')).toBe(true));
 
   it('should be an active package', () =>
-    expect(atom.packages.isPackageActive('linter-docker')).toBe(true),
-  );
+    expect(atom.packages.isPackageActive('linter-docker')).toBe(true));
 
   it('finds nothing wrong with a valid file', async () => {
     const editor = await atom.workspace.open(goodPath);
