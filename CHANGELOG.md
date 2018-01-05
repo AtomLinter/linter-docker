@@ -1,5 +1,21 @@
 # Change Log
 
+## [v0.3.0](https://github.com/AtomLinter/linter-docker/tree/v0.3.0) (2018-01-05)
+[Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.2.1...v0.3.0)
+
+**Implemented enhancements:**
+
+- Add CircleCI configuration [\#41](https://github.com/AtomLinter/linter-docker/pull/41) ([lucasdf](https://github.com/lucasdf))
+- Update eslint-config-airbnb-base to version 12.0.0 🚀 [\#39](https://github.com/AtomLinter/linter-docker/pull/39) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+**Closed issues:**
+
+- Add CI to this repository [\#40](https://github.com/AtomLinter/linter-docker/issues/40)
+
+**Merged pull requests:**
+
+- chore\(package\): update dockerlint to version 0.3.7 [\#43](https://github.com/AtomLinter/linter-docker/pull/43) ([lucasdf](https://github.com/lucasdf))
+
 ## [v0.2.1](https://github.com/AtomLinter/linter-docker/tree/v0.2.1) (2017-08-27)
 [Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.2.0...v0.2.1)
 
