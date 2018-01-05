@@ -1,7 +1,7 @@
 {
   "name": "linter-docker",
   "main": "./lib/init",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Linter plugin for Dockerfile's, using dockerlint",
   "repository": "https://github.com/AtomLinter/linter-docker.git",
   "private": true,
