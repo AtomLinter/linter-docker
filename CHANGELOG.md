@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.3.1](https://github.com/AtomLinter/linter-docker/tree/v0.3.1) (2018-04-04)
+[Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.3.0...v0.3.1)
+
+**Closed issues:**
+
+- An in-range update of eslint-plugin-import is breaking the build 🚨 [\#46](https://github.com/AtomLinter/linter-docker/issues/46)
+- An in-range update of eslint is breaking the build 🚨 [\#45](https://github.com/AtomLinter/linter-docker/issues/45)
+- An in-range update of dockerlint is breaking the build 🚨 [\#42](https://github.com/AtomLinter/linter-docker/issues/42)
+
+**Merged pull requests:**
+
+- Update dockerlint [\#50](https://github.com/AtomLinter/linter-docker/pull/50) ([lucasdf](https://github.com/lucasdf))
+- Update dockerlint to the latest version 🚀 [\#49](https://github.com/AtomLinter/linter-docker/pull/49) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.3.0](https://github.com/AtomLinter/linter-docker/tree/v0.3.0) (2018-01-05)
 [Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.2.1...v0.3.0)
 
@@ -14,6 +28,7 @@
 
 **Merged pull requests:**
 
+- v0.3.0 release [\#44](https://github.com/AtomLinter/linter-docker/pull/44) ([lucasdf](https://github.com/lucasdf))
 - chore\(package\): update dockerlint to version 0.3.7 [\#43](https://github.com/AtomLinter/linter-docker/pull/43) ([lucasdf](https://github.com/lucasdf))
 
 ## [v0.2.1](https://github.com/AtomLinter/linter-docker/tree/v0.2.1) (2017-08-27)
@@ -43,6 +58,10 @@
 **Implemented enhancements:**
 
 - Update atom-linter to version 9.0.0 🚀 [\#32](https://github.com/AtomLinter/linter-docker/pull/32) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+**Closed issues:**
+
+- Incorrect lint errors about single quotes [\#31](https://github.com/AtomLinter/linter-docker/issues/31)
 
 ## [v0.1.4](https://github.com/AtomLinter/linter-docker/tree/v0.1.4) (2016-12-01)
 [Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.1.3...v0.1.4)
