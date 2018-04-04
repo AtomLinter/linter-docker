@@ -32,13 +32,13 @@ describe('The docker provider for Linter', () => {
 
   it('shows errors in an a file with issues', async () => {
     const editor = await atom.workspace.open(badPath);
-    const expected = 'ENV invalid format ENV_VARIABLE';
+    const expected = 'UNKNOWN_COMMAND is invalid';
     const messages = await lint(editor);
 
     expect(messages[0].severity).toBe('error');
     expect(messages[0].excerpt).toBe(expected);
     expect(messages[0].location.file).toBe(badPath);
-    expect(messages[0].location.position).toEqual([[1, 0], [1, 16]]);
+    expect(messages[0].location.position).toEqual([[1, 0], [1, 15]]);
     expect(messages.length).toBe(1);
   });
 
