@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.3.2](https://github.com/AtomLinter/linter-docker/tree/v0.3.2) (2018-04-06)
+[Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.3.1...v0.3.2)
+
+**Merged pull requests:**
+
+- Update dockerlint to the latest version 🚀 [\#52](https://github.com/AtomLinter/linter-docker/pull/52) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.3.1](https://github.com/AtomLinter/linter-docker/tree/v0.3.1) (2018-04-04)
 [Full Changelog](https://github.com/AtomLinter/linter-docker/compare/v0.3.0...v0.3.1)
 
