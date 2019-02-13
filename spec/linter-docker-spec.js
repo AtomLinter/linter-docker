@@ -1,8 +1,10 @@
 'use babel';
 
 import { join } from 'path';
-// eslint-disable-next-line no-unused-vars
-import { it, fit, wait, beforeEach, afterEach } from 'jasmine-fix';
+import {
+  // eslint-disable-next-line no-unused-vars
+  it, fit, wait, beforeEach, afterEach,
+} from 'jasmine-fix';
 
 const fixturePath = join(__dirname, 'fixtures');
 const goodPath = join(fixturePath, 'good', 'Dockerfile');
@@ -18,11 +20,13 @@ describe('The docker provider for Linter', () => {
     await atom.packages.activatePackage('linter-docker');
   });
 
-  it('should be in the packages list', () =>
-    expect(atom.packages.isPackageLoaded('linter-docker')).toBe(true));
+  it('should be in the packages list', () => {
+    expect(atom.packages.isPackageLoaded('linter-docker')).toBe(true);
+  });
 
-  it('should be an active package', () =>
-    expect(atom.packages.isPackageActive('linter-docker')).toBe(true));
+  it('should be an active package', () => {
+    expect(atom.packages.isPackageActive('linter-docker')).toBe(true);
+  });
 
   it('finds nothing wrong with a valid file', async () => {
     const editor = await atom.workspace.open(goodPath);
